@@ -1,0 +1,34 @@
+
+<ion-header>
+  <ion-toolbar no-border-top>
+    <ion-searchbar
+      [(ngModel)]="search"
+      [showCancelButton]="false"
+      (ionInput)="getJobs($event)"
+      placeholder="Search jobs"
+    >
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding  class="body">
+
+  <ion-card *ngFor="let i of listJobs" (click)="selectJob(i)" style="border-radius: 15px;">
+    <img [src]="i.logo" class="logo">
+    <ion-card-content style="float:left;width: 70%;">
+      <ion-card-title style="font-size: 140%;">
+        {{i.title}}
+      </ion-card-title>
+      <p>
+        {{i.company}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="noMoreItemsAvailable==false">
+    <ion-infinite-scroll-content
+     loadingSpinner="bubbles"
+     loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

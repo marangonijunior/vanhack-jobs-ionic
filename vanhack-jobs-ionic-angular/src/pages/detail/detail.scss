@@ -1,0 +1,14 @@
+.body{
+  background-image: url("../assets/img/fundo.png");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.logoDetail{
+  z-index: 3;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 30%;
+  width: 30%;
+  border-radius: 15%;
+}

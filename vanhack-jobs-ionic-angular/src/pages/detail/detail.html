@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar transparent>
+    <ion-title>{{job.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding  class="body">
+
+  <img [src]="job.logo" class="logoDetail">
+  <ion-card
+  style="
+    border-radius: 15px;
+    width: 90%;
+    height: 70%;
+    margin-left: 5%;
+    margin-top: 25%;
+    padding-top: 15%;
+   text-align: center;
+  ">
+    <ion-card-content>
+      <ion-card-title>
+        {{job.title}}
+      </ion-card-title>
+      <p style="color:primary">
+        {{job.salary | currency}}
+      </p>
+      <br><br>
+      <p style="color:#000; text-align: justify;">
+        {{job.description}}
+      </p>
+      <br>
+      <p style="color:#000">
+        Skills necessary: <span *ngFor="let i of job.skills"> {{i.name}} </span>
+      </p>
+      <p> Created: {{job.date | date: 'dd/MM/yyyy H:mm'}} </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
