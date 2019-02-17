@@ -1,2 +1,0 @@
-# vanhack-jobs
-

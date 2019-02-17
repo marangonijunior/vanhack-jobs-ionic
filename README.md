@@ -1,7 +1,5 @@
 # vanhackjobs
-An application builds with two technologies.
+An application to list jobs
 
-vanhack-jobs-ionic-angular
-- Builded with Ionic 3 and Angular
+- Builded with Ionic 3
 
-The both using same REST API.
